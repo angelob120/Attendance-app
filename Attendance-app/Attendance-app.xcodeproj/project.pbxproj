@@ -18,6 +18,15 @@
 		20F9E97F2C987275007B7A9D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9E97E2C987275007B7A9D /* EventsView.swift */; };
 		20F9E9812C9873A8007B7A9D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9E9802C9873A8007B7A9D /* ProfileView.swift */; };
 		20F9E9832C9873C4007B7A9D /* FullMonthCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9E9822C9873C4007B7A9D /* FullMonthCalendarView.swift */; };
+		34369A652C98844000CCC460 /* CloudKitServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A642C98844000CCC460 /* CloudKitServices.swift */; };
+		34369A662C98844000CCC460 /* CloudKitServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A642C98844000CCC460 /* CloudKitServices.swift */; };
+		34369A672C98844000CCC460 /* CloudKitServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A642C98844000CCC460 /* CloudKitServices.swift */; };
+		34369A6A2C98856E00CCC460 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A692C98856E00CCC460 /* EventViewModel.swift */; };
+		34369A6B2C98856E00CCC460 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A692C98856E00CCC460 /* EventViewModel.swift */; };
+		34369A6C2C98856E00CCC460 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A692C98856E00CCC460 /* EventViewModel.swift */; };
+		34369A6F2C9885BD00CCC460 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A6E2C9885BD00CCC460 /* Event.swift */; };
+		34369A702C9885BD00CCC460 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A6E2C9885BD00CCC460 /* Event.swift */; };
+		34369A712C9885BD00CCC460 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A6E2C9885BD00CCC460 /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,9 @@
 		20F9E97E2C987275007B7A9D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		20F9E9802C9873A8007B7A9D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		20F9E9822C9873C4007B7A9D /* FullMonthCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMonthCalendarView.swift; sourceTree = "<group>"; };
+		34369A642C98844000CCC460 /* CloudKitServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitServices.swift; sourceTree = "<group>"; };
+		34369A692C98856E00CCC460 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		34369A6E2C9885BD00CCC460 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +116,14 @@
 			isa = PBXGroup;
 			children = (
 				20F9E97E2C987275007B7A9D /* EventsView.swift */,
+				34369A622C98829700CCC460 /* Views */,
 				20F9E9802C9873A8007B7A9D /* ProfileView.swift */,
 				20F9E9822C9873C4007B7A9D /* FullMonthCalendarView.swift */,
 				20AF3C1F2C91C7730016D5EC /* Attendance_appApp.swift */,
-				20AF3C212C91C7730016D5EC /* ContentView.swift */,
 				20AF3C232C91C7730016D5EC /* Item.swift */,
+				34369A6D2C98859F00CCC460 /* Models */,
+				34369A682C98854300CCC460 /* ViewModels */,
+				34369A632C9883C300CCC460 /* Services */,
 				20AF3C252C91C7750016D5EC /* Assets.xcassets */,
 				20AF3C272C91C7750016D5EC /* Attendance_app.entitlements */,
 				20AF3C282C91C7750016D5EC /* Preview Content */,
@@ -139,6 +154,38 @@
 				20AF3C3F2C91C7750016D5EC /* Attendance_appUITestsLaunchTests.swift */,
 			);
 			path = "Attendance-appUITests";
+			sourceTree = "<group>";
+		};
+		34369A622C98829700CCC460 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20AF3C212C91C7730016D5EC /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34369A632C9883C300CCC460 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34369A642C98844000CCC460 /* CloudKitServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34369A682C98854300CCC460 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				34369A692C98856E00CCC460 /* EventViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		34369A6D2C98859F00CCC460 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34369A6E2C9885BD00CCC460 /* Event.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F9E97F2C987275007B7A9D /* EventsView.swift in Sources */,
+				34369A6F2C9885BD00CCC460 /* Event.swift in Sources */,
 				20AF3C222C91C7730016D5EC /* ContentView.swift in Sources */,
 				20F9E9812C9873A8007B7A9D /* ProfileView.swift in Sources */,
+				34369A652C98844000CCC460 /* CloudKitServices.swift in Sources */,
 				20AF3C242C91C7730016D5EC /* Item.swift in Sources */,
+				34369A6A2C98856E00CCC460 /* EventViewModel.swift in Sources */,
 				20F9E9832C9873C4007B7A9D /* FullMonthCalendarView.swift in Sources */,
 				20AF3C202C91C7730016D5EC /* Attendance_appApp.swift in Sources */,
 			);
@@ -284,6 +334,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34369A702C9885BD00CCC460 /* Event.swift in Sources */,
+				34369A662C98844000CCC460 /* CloudKitServices.swift in Sources */,
+				34369A6B2C98856E00CCC460 /* EventViewModel.swift in Sources */,
 				20AF3C342C91C7750016D5EC /* Attendance_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,8 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34369A672C98844000CCC460 /* CloudKitServices.swift in Sources */,
+				34369A6C2C98856E00CCC460 /* EventViewModel.swift in Sources */,
 				20AF3C3E2C91C7750016D5EC /* Attendance_appUITests.swift in Sources */,
 				20AF3C402C91C7750016D5EC /* Attendance_appUITestsLaunchTests.swift in Sources */,
+				34369A712C9885BD00CCC460 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +493,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Attendance-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 82SWTYVM8B;
+				DEVELOPMENT_TEAM = RQ93Y5FB92;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -476,7 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Attendance-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 82SWTYVM8B;
+				DEVELOPMENT_TEAM = RQ93Y5FB92;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

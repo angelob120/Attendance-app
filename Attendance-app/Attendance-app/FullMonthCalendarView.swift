@@ -240,42 +240,50 @@ struct LegendItem: View {
 
 // Bottom action buttons for Fix Time, Request Time Off, and Detailed Attendance List
 struct ActionButtonView: View {
+    @State private var viewTabView = true
+    @State private var showProfileView = false
+    
     var body: some View {
-        VStack {
-            Button(action: {
-                // Action for fixing time
-            }) {
-                HStack {
-                    Text("Fix Time")
-                    Spacer()
-                    Image(systemName: "chevron.right")
+        NavigationStack {
+            VStack {
+                Button(action: {
+                    // Action for fixing time
+                }) {
+                    HStack {
+                        Text("Fix Time")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .padding()
+                    .background(Color.green.opacity(0.1))
                 }
-                .padding()
-                .background(Color.green.opacity(0.1))
-            }
-            
-            Button(action: {
-                // Action for requesting time off
-            }) {
-                HStack {
-                    Text("Request Time Off")
-                    Spacer()
-                    Image(systemName: "chevron.right")
+                
+                Button(action: {
+                    // Action for requesting time off
+                }) {
+                    HStack {
+                        Text("Request Time Off")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .padding()
+                    .background(Color.green.opacity(0.1))
                 }
-                .padding()
-                .background(Color.green.opacity(0.1))
-            }
-            
-            Button(action: {
-                // Action for detailed attendance list
-            }) {
-                HStack {
-                    Text("Detailed Attendance List")
-                    Spacer()
-                    Image(systemName: "chevron.right")
+                // Toggle switch is used for navigation. This will like be fixed to be a NavigationStack
+                Button(action: {
+                    showProfileView.toggle()
+                }) {
+                    HStack {
+                        Text("Detailed Attendance List")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .padding()
+                    .background(Color.green.opacity(0.1))
                 }
-                .padding()
-                .background(Color.green.opacity(0.1))
+                .sheet(isPresented: $showProfileView, content: {
+                    ProfileView()
+                })
             }
         }
         .padding()
