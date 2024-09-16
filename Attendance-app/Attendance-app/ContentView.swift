@@ -148,20 +148,28 @@ struct ContentView: View {
             
             Spacer()
             
-            // Bottom Navigation
+            // Bottom Navigation Bar
             HStack {
-                TabBarButton(icon: "house.fill", text: "Home")
+                NavigationLink(destination: ContentView()) {
+                    TabBarButton(icon: "house.fill", text: "Home")
+                }
                 Spacer()
-                TabBarButton(icon: "calendar", text: "Calendar")
+                NavigationLink(destination: FullMonthCalendarView()) {
+                    TabBarButton(icon: "calendar", text: "Calendar")
+                }
                 Spacer()
-                TabBarButton(icon: "person.fill", text: "Profile")
+                NavigationLink(destination: ProfileView()) {
+                    TabBarButton(icon: "person.fill", text: "Profile")
+                }
                 Spacer()
-                TabBarButton(icon: "star.fill", text: "Events")
+                NavigationLink(destination: EventsView()) {
+                    TabBarButton(icon: "star.fill", text: "Events")
+                }
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 16)
         }
-    }
+    } // <-- Added missing closing brace
     
     // Function to get the first day of the week based on the current week offset
     func firstDayOfTheWeek(weekOffset: Int) -> Date {
