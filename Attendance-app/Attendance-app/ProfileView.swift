@@ -51,6 +51,7 @@ struct ProfileView: View {
                 Text("IT Support: IT@apple.com")
             }
             .padding(.horizontal, 20)
+            .padding(.vertical, 20)
             .frame(maxWidth: .infinity, alignment: .leading)
             
             Spacer()
@@ -72,7 +73,7 @@ struct ProfileView: View {
                     .cornerRadius(8)
                 }
                 .padding(.horizontal)
-                
+                Spacer()
                 Button(action: {
                     // Action for One Login Dashboard
                 }) {
@@ -91,10 +92,32 @@ struct ProfileView: View {
                 .padding(.bottom, 20)
             }
             
+            
             Spacer()
+            
+            HStack {
+                NavigationLink(destination: ContentView()) {
+                    CalendarTabBarButton(icon: "house.fill", text: "Home")
+                }
+                Spacer()
+                NavigationLink(destination: FullMonthCalendarView()) {
+                    CalendarTabBarButton(icon: "calendar", text: "Calendar")
+                }
+                Spacer()
+                NavigationLink(destination: ProfileView()) {
+                    CalendarTabBarButton(icon: "person.fill", text: "Profile")
+                }
+                Spacer()
+                NavigationLink(destination: EventsView()) {
+                    CalendarTabBarButton(icon: "star.fill", text: "Events")
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.bottom, 1)
         }
         .navigationBarTitle("Profile", displayMode: .inline)  // Add if you want to show navigation title
     }
+    
 }
 
 struct ProfileView_Previews: PreviewProvider {

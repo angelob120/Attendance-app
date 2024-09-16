@@ -75,7 +75,7 @@ struct EventsView: View {
                 }
             }
             .padding(.horizontal, 16)
-            .padding(.bottom, 16)
+            .padding(.bottom, 1)
         }
         .navigationBarTitle("Events", displayMode: .inline)
     }

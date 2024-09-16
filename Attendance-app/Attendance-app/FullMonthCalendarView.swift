@@ -31,7 +31,7 @@ struct FullMonthCalendarView: View {
     }
     
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 1) {
             // Display month and year at the top
             Text(monthYearFormatter.string(from: selectedDate))
                 .font(.title)
@@ -68,7 +68,7 @@ struct FullMonthCalendarView: View {
                 }
             }
             .padding(.horizontal, 16)
-            .padding(.bottom, 16)
+            .padding(.bottom, 1)
         }
     }
 }
