@@ -1,114 +1,146 @@
 //
-//  eventsView.swift
+//  File.swift
 //  Attendance-app
 //
-//  Created by AB on 9/13/24.
+//  Created by AB on 9/16/24.
 //
 
 import SwiftUI
 
-struct EventRow: View {
+struct EventsView: View {
+    var events = Array(repeating: Event(date: "SEP:3", day: "WENS", title: "Event 1:", subtitle: "Networking Event"), count: 7)
+    
     var body: some View {
-        HStack {
-            VStack {
-                Text("SEP:3")
-                    .font(.headline)
+        VStack(alignment: .leading) {
+            // Title
+            Text("Events:")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.leading, 16)
+                .padding(.top, 20)
+            
+            // Header
+            HStack {
+                Text("Date")
+                    .font(.subheadline)
                     .foregroundColor(.gray)
-                Text("WENS")
+                
+                Spacer()
+                
+                Text("Event")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
+                Spacer()
+                
+                Image(systemName: "arrow.up.arrow.down")
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
-            .frame(width: 60)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .background(Color(UIColor.systemGray6))
+            .cornerRadius(8)
+            .padding(.horizontal, 16)
             
-            VStack(alignment: .leading) {
-                Text("Event 1:")
-                    .font(.headline)
-                    .padding(.bottom, 2)
-                Text("Networking Event")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+            // Event List
+            ScrollView {
+                VStack(spacing: 10) {
+                    ForEach(events.indices, id: \.self) { index in
+                        EventRow(event: events[index], isHighlighted: index == 0) // Highlight the first event
+                    }
+                }
+                .padding(.horizontal, 19)
+                .padding(.top, 10)
             }
             
             Spacer()
             
-            // Placeholder for more options or action menu
-            Image(systemName: "ellipsis")
-                .foregroundColor(.gray)
-                .padding(.trailing)
+            // Bottom Navigation Bar
+            HStack {
+                NavigationLink(destination: ContentView()) {
+                    CalendarTabBarButton(icon: "house.fill", text: "Home")
+                }
+                Spacer()
+                NavigationLink(destination: FullMonthCalendarView()) {
+                    CalendarTabBarButton(icon: "calendar", text: "Calendar")
+                }
+                Spacer()
+                NavigationLink(destination: ProfileView()) {
+                    CalendarTabBarButton(icon: "person.fill", text: "Profile")
+                }
+                Spacer()
+                NavigationLink(destination: EventsView()) {
+                    CalendarTabBarButton(icon: "star.fill", text: "Events")
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.bottom, 16)
         }
-        .padding(.vertical, 10)
-        .background(RoundedRectangle(cornerRadius: 8)
-                        .fill(Color.green.opacity(0.1)))
-        .padding(.horizontal)
+        .navigationBarTitle("Events", displayMode: .inline)
     }
 }
 
-struct EventsTabView: View {  // Avoiding conflicting names here
+struct Event: Identifiable {
+    var id = UUID()
+    var date: String
+    var day: String
+    var title: String
+    var subtitle: String
+}
+
+struct EventRow: View {
+    let event: Event
+    let isHighlighted: Bool
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack {
-                    Text("Events:")
-                        .font(.largeTitle)
-                        .bold()
-                    Spacer()
-                    Image(systemName: "line.horizontal.3.decrease")
-                        .padding()
-                }
-                .padding()
+        HStack {
+            // Date and Day
+            VStack(alignment: .leading) {
+                Text(event.date)
+                    .font(.headline)
+                    .fontWeight(.bold)
                 
-                List(0..<6) { _ in
-                    EventRow()
-                }
-                .listStyle(PlainListStyle())
+                Text(event.day)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text("Events")
-                        .font(.title3)
-                        .bold()
-                }
+            .padding(.vertical, 10)
+            
+            Spacer()
+            
+            // Event Title and Subtitle
+            VStack(alignment: .leading) {
+                Text(event.title)
+                    .font(.headline)
+                    .fontWeight(isHighlighted ? .bold : .regular)
+                    .foregroundColor(isHighlighted ? Color.white : Color.black)
+                
+                Text(event.subtitle)
+                    .font(.subheadline)
+                    .foregroundColor(isHighlighted ? Color.white.opacity(0.8) : Color.gray)
+            }
+            .padding(.vertical, 10)
+            .padding(.horizontal, 50)
+            .background(isHighlighted ? Color.green : Color(UIColor.systemGray6))
+            .cornerRadius(12)
+            
+            Spacer()
+            
+            // Options Button
+            Button(action: {
+                // Action for more options
+            }) {
+                Image(systemName: "ellipsis")
+                    .foregroundColor(isHighlighted ? Color.white : Color.gray)
             }
         }
+        .padding(.vertical, 5)
     }
 }
 
-struct MainContentView: View {  // Renamed this from 'ContentView' to avoid conflict
-    var body: some View {
-        TabView {
-            Text("Home") // Placeholder for Home tab
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-            
-            EventsTabView()
-                .tabItem {
-                    Image(systemName: "calendar")
-                    Text("Events")
-                }
-            
-            Text("Profile") // Placeholder for Profile tab
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
-            
-            Text("Star") // Placeholder for Star tab
-                .tabItem {
-                    Image(systemName: "star")
-                    Text("Favorites")
-                }
-        }
-    }
-}
-
-@main
-struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            MainContentView()  // Correct reference to renamed struct
-        }
+struct EventsView_Previews: PreviewProvider {
+    static var previews: some View {
+        EventsView()
     }
 }
