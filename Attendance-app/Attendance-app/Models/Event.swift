@@ -28,3 +28,10 @@ struct Events: Identifiable {
         Events(title: "Baby Shower", venue: "Mom's House", description: "Come wash our baby, they rolled in the mud and we need help cleaning them up.", date: Date()),
     ]
 }
+
+
+struct MessageAlert: Identifiable {
+    let id: UUID
+    let title: String
+    let message: String
+}

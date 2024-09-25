@@ -18,6 +18,8 @@
 		20F9E97F2C987275007B7A9D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9E97E2C987275007B7A9D /* EventsView.swift */; };
 		20F9E9812C9873A8007B7A9D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9E9802C9873A8007B7A9D /* ProfileView.swift */; };
 		20F9E9832C9873C4007B7A9D /* FullMonthCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9E9822C9873C4007B7A9D /* FullMonthCalendarView.swift */; };
+		341FA36E2CA0CD080022ED1A /* PhotoAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341FA36D2CA0CCFF0022ED1A /* PhotoAsset.swift */; };
+		341FA3702CA0CD190022ED1A /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341FA36F2CA0CD140022ED1A /* MediaType.swift */; };
 		34369A652C98844000CCC460 /* CloudKitServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A642C98844000CCC460 /* CloudKitServices.swift */; };
 		34369A662C98844000CCC460 /* CloudKitServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A642C98844000CCC460 /* CloudKitServices.swift */; };
 		34369A672C98844000CCC460 /* CloudKitServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A642C98844000CCC460 /* CloudKitServices.swift */; };
@@ -62,6 +64,9 @@
 		20F9E97E2C987275007B7A9D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		20F9E9802C9873A8007B7A9D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		20F9E9822C9873C4007B7A9D /* FullMonthCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMonthCalendarView.swift; sourceTree = "<group>"; };
+		341FA36B2CA0C9540022ED1A /* OpenPhotoIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPhotoIntent.swift; sourceTree = "<group>"; };
+		341FA36D2CA0CCFF0022ED1A /* PhotoAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAsset.swift; sourceTree = "<group>"; };
+		341FA36F2CA0CD140022ED1A /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		34369A642C98844000CCC460 /* CloudKitServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitServices.swift; sourceTree = "<group>"; };
 		34369A692C98856E00CCC460 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		34369A6E2C9885BD00CCC460 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 		20AF3C132C91C7730016D5EC = {
 			isa = PBXGroup;
 			children = (
+				341FA36A2CA0C8E90022ED1A /* Apple Intelligence */,
 				20AF3C1E2C91C7730016D5EC /* Attendance-app */,
 				20AF3C322C91C7750016D5EC /* Attendance-appTests */,
 				20AF3C3C2C91C7750016D5EC /* Attendance-appUITests */,
@@ -154,6 +160,48 @@
 				20AF3C3F2C91C7750016D5EC /* Attendance_appUITestsLaunchTests.swift */,
 			);
 			path = "Attendance-appUITests";
+			sourceTree = "<group>";
+		};
+		341FA36A2CA0C8E90022ED1A /* Apple Intelligence */ = {
+			isa = PBXGroup;
+			children = (
+				341FA36C2CA0CCC40022ED1A /* AppIntents */,
+			);
+			path = "Apple Intelligence";
+			sourceTree = "<group>";
+		};
+		341FA36C2CA0CCC40022ED1A /* AppIntents */ = {
+			isa = PBXGroup;
+			children = (
+				341FA3722CA0CD320022ED1A /* Entities */,
+				341FA3732CA0CD490022ED1A /* Intents */,
+				341FA3712CA0CD240022ED1A /*  Enums */,
+			);
+			path = AppIntents;
+			sourceTree = "<group>";
+		};
+		341FA3712CA0CD240022ED1A /*  Enums */ = {
+			isa = PBXGroup;
+			children = (
+				341FA36F2CA0CD140022ED1A /* MediaType.swift */,
+			);
+			path = " Enums";
+			sourceTree = "<group>";
+		};
+		341FA3722CA0CD320022ED1A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				341FA36D2CA0CCFF0022ED1A /* PhotoAsset.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		341FA3732CA0CD490022ED1A /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				341FA36B2CA0C9540022ED1A /* OpenPhotoIntent.swift */,
+			);
+			path = Intents;
 			sourceTree = "<group>";
 		};
 		34369A622C98829700CCC460 /* Views */ = {
@@ -321,11 +369,13 @@
 				20F9E97F2C987275007B7A9D /* EventsView.swift in Sources */,
 				34369A6F2C9885BD00CCC460 /* Event.swift in Sources */,
 				20AF3C222C91C7730016D5EC /* ContentView.swift in Sources */,
+				341FA36E2CA0CD080022ED1A /* PhotoAsset.swift in Sources */,
 				20F9E9812C9873A8007B7A9D /* ProfileView.swift in Sources */,
 				34369A652C98844000CCC460 /* CloudKitServices.swift in Sources */,
 				20AF3C242C91C7730016D5EC /* Item.swift in Sources */,
 				34369A6A2C98856E00CCC460 /* EventViewModel.swift in Sources */,
 				20F9E9832C9873C4007B7A9D /* FullMonthCalendarView.swift in Sources */,
+				341FA3702CA0CD190022ED1A /* MediaType.swift in Sources */,
 				20AF3C202C91C7730016D5EC /* Attendance_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

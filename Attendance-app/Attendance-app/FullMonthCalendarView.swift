@@ -194,7 +194,7 @@ struct AttendanceStatusView: View {
 // Legend view for attendance status indicators
 struct LegendView: View {
     var body: some View {
-        HStack(spacing: 16) {
+        HStack(spacing: 12) {
             LegendItem(color: .red, label: "Absences")
             LegendItem(color: .yellow, label: "Tardies")
             LegendItem(color: .green, label: "Attendances")
@@ -313,3 +313,6 @@ struct FullMonthCalendarView_Previews: PreviewProvider {
         FullMonthCalendarView()
     }
 }
+
+
+ 
