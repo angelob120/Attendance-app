@@ -58,7 +58,7 @@ struct EventsView: View {
             
             // Bottom Navigation Bar
             HStack {
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: ContentMainView()) {
                     CalendarTabBarButton(icon: "house.fill", text: "Home")
                 }
                 Spacer()

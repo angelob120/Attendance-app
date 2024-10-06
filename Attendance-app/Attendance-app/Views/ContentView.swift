@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView2: View {
     @State private var selectedDate: Date = Date()  // State to track the selected date
     @State private var isPunchedIn: Bool = false  // State for punch in/out
     @State private var timeElapsed: String = "00:00"  // Placeholder for the timer
@@ -150,7 +150,7 @@ struct ContentView: View {
             
             // Bottom Navigation Bar
             HStack {
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: ContentView2()) {
                     TabBarButton(icon: "house.fill", text: "Home")
                 }
                 Spacer()
@@ -241,8 +241,8 @@ struct TabBarButton: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView2_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView2()
     }
 }

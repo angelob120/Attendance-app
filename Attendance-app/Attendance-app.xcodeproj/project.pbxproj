@@ -29,6 +29,13 @@
 		34369A6F2C9885BD00CCC460 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A6E2C9885BD00CCC460 /* Event.swift */; };
 		34369A702C9885BD00CCC460 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A6E2C9885BD00CCC460 /* Event.swift */; };
 		34369A712C9885BD00CCC460 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34369A6E2C9885BD00CCC460 /* Event.swift */; };
+		34BE4C002CB343C30077229B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BE4BFF2CB343B90077229B /* UserProfileViewController.swift */; };
+		34C2B6D82CAAF4270028E2C5 /* CoreNFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2B6D72CAAF40B0028E2C5 /* CoreNFC.swift */; };
+		34C2B6DA2CAAF61F0028E2C5 /* CustomCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2B6D92CAAF6150028E2C5 /* CustomCalendar.swift */; };
+		34C2B6DC2CAAFA450028E2C5 /* ContentMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2B6DB2CAAFA3D0028E2C5 /* ContentMainView.swift */; };
+		34C2B6DE2CAAFACB0028E2C5 /* NewCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2B6DD2CAAFAC40028E2C5 /* NewCalendarView.swift */; };
+		34C2B6E02CAAFF180028E2C5 /* Something.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2B6DF2CAAFF150028E2C5 /* Something.swift */; };
+		34DD82912CAF962A00E7C964 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DD82902CAF962400E7C964 /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +77,13 @@
 		34369A642C98844000CCC460 /* CloudKitServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitServices.swift; sourceTree = "<group>"; };
 		34369A692C98856E00CCC460 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		34369A6E2C9885BD00CCC460 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		34BE4BFF2CB343B90077229B /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		34C2B6D72CAAF40B0028E2C5 /* CoreNFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNFC.swift; sourceTree = "<group>"; };
+		34C2B6D92CAAF6150028E2C5 /* CustomCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendar.swift; sourceTree = "<group>"; };
+		34C2B6DB2CAAFA3D0028E2C5 /* ContentMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMainView.swift; sourceTree = "<group>"; };
+		34C2B6DD2CAAFAC40028E2C5 /* NewCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCalendarView.swift; sourceTree = "<group>"; };
+		34C2B6DF2CAAFF150028E2C5 /* Something.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Something.swift; sourceTree = "<group>"; };
+		34DD82902CAF962400E7C964 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,18 +135,24 @@
 		20AF3C1E2C91C7730016D5EC /* Attendance-app */ = {
 			isa = PBXGroup;
 			children = (
+				34C2B6DD2CAAFAC40028E2C5 /* NewCalendarView.swift */,
+				34C2B6D92CAAF6150028E2C5 /* CustomCalendar.swift */,
+				34C2B6D72CAAF40B0028E2C5 /* CoreNFC.swift */,
+				34C2B6DB2CAAFA3D0028E2C5 /* ContentMainView.swift */,
+				34C2B6DF2CAAFF150028E2C5 /* Something.swift */,
+				34C2B6D42CAAEE840028E2C5 /* App */,
+				34C2B6D32CAAEE490028E2C5 /* Resources */,
+				34C2B6D22CAAEE2E0028E2C5 /* Utilities */,
+				34C2B6D02CAAEDFA0028E2C5 /* Database */,
 				20F9E97E2C987275007B7A9D /* EventsView.swift */,
 				34369A622C98829700CCC460 /* Views */,
-				20F9E9802C9873A8007B7A9D /* ProfileView.swift */,
-				20F9E9822C9873C4007B7A9D /* FullMonthCalendarView.swift */,
-				20AF3C1F2C91C7730016D5EC /* Attendance_appApp.swift */,
 				20AF3C232C91C7730016D5EC /* Item.swift */,
 				34369A6D2C98859F00CCC460 /* Models */,
 				34369A682C98854300CCC460 /* ViewModels */,
 				34369A632C9883C300CCC460 /* Services */,
-				20AF3C252C91C7750016D5EC /* Assets.xcassets */,
-				20AF3C272C91C7750016D5EC /* Attendance_app.entitlements */,
 				20AF3C282C91C7750016D5EC /* Preview Content */,
+				20AF3C272C91C7750016D5EC /* Attendance_app.entitlements */,
+				20AF3C1F2C91C7730016D5EC /* Attendance_appApp.swift */,
 			);
 			path = "Attendance-app";
 			sourceTree = "<group>";
@@ -207,6 +227,9 @@
 		34369A622C98829700CCC460 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20F9E9822C9873C4007B7A9D /* FullMonthCalendarView.swift */,
+				20F9E9802C9873A8007B7A9D /* ProfileView.swift */,
+				34BE4BFF2CB343B90077229B /* UserProfileViewController.swift */,
 				20AF3C212C91C7730016D5EC /* ContentView.swift */,
 			);
 			path = Views;
@@ -234,6 +257,36 @@
 				34369A6E2C9885BD00CCC460 /* Event.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		34C2B6D02CAAEDFA0028E2C5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		34C2B6D22CAAEE2E0028E2C5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		34C2B6D32CAAEE490028E2C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20AF3C252C91C7750016D5EC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		34C2B6D42CAAEE840028E2C5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				34DD82902CAF962400E7C964 /* Validator.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,16 +419,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C2B6D82CAAF4270028E2C5 /* CoreNFC.swift in Sources */,
+				34C2B6DE2CAAFACB0028E2C5 /* NewCalendarView.swift in Sources */,
 				20F9E97F2C987275007B7A9D /* EventsView.swift in Sources */,
 				34369A6F2C9885BD00CCC460 /* Event.swift in Sources */,
 				20AF3C222C91C7730016D5EC /* ContentView.swift in Sources */,
+				34C2B6DC2CAAFA450028E2C5 /* ContentMainView.swift in Sources */,
 				341FA36E2CA0CD080022ED1A /* PhotoAsset.swift in Sources */,
+				34BE4C002CB343C30077229B /* UserProfileViewController.swift in Sources */,
 				20F9E9812C9873A8007B7A9D /* ProfileView.swift in Sources */,
+				34C2B6E02CAAFF180028E2C5 /* Something.swift in Sources */,
 				34369A652C98844000CCC460 /* CloudKitServices.swift in Sources */,
 				20AF3C242C91C7730016D5EC /* Item.swift in Sources */,
 				34369A6A2C98856E00CCC460 /* EventViewModel.swift in Sources */,
+				34DD82912CAF962A00E7C964 /* Validator.swift in Sources */,
 				20F9E9832C9873C4007B7A9D /* FullMonthCalendarView.swift in Sources */,
 				341FA3702CA0CD190022ED1A /* MediaType.swift in Sources */,
+				34C2B6DA2CAAF61F0028E2C5 /* CustomCalendar.swift in Sources */,
 				20AF3C202C91C7730016D5EC /* Attendance_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
