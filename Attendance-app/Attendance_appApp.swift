@@ -10,20 +10,7 @@ import SwiftData
 
 @main
 struct Attendance_appApp: App {
-    @State private var selectedTab = 0
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-    
+    @StateObject var clubManagerVM = clubManager()
   ///  The model container sets up the data persistence layer for the app. It's placed in the App struct because of the shared ModelContainer for your the  app, and the App struct is the entry point of SwiftUI app.
     ///
     ///  Wtihout the Model container there will be loss of data persistence and functionality loss.
@@ -42,7 +29,10 @@ struct Attendance_appApp: App {
     var body: some Scene {
         WindowGroup {
             ContentMainView()
+            
+                .environmentObject(clubManagerVM)
+
         }
-        .modelContainer(sharedModelContainer)
+        
     }
 }

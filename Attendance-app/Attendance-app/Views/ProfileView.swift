@@ -95,24 +95,24 @@ struct ProfileView: View {
             
             Spacer()
             
-            HStack {
-                NavigationLink(destination: ContentMainView()) {
-                    CalendarTabBarButton(icon: "house.fill", text: "Home")
-                }
-                Spacer()
-                NavigationLink(destination: FullMonthCalendarView()) {
-                    CalendarTabBarButton(icon: "calendar", text: "Calendar")
-                }
-                Spacer()
-                NavigationLink(destination: ProfileView()) {
-                    CalendarTabBarButton(icon: "person.fill", text: "Profile")
-                }
-                Spacer()
-                NavigationLink(destination: EventsView()) {
-                    CalendarTabBarButton(icon: "star.fill", text: "Events")
-                }
-            }
-            .padding(.horizontal, 16)
+//            HStack {
+//                NavigationLink(destination: ContentMainView()) {
+//                    CalendarTabBarButton(icon: "house.fill", text: "Home")
+//                }
+//                Spacer()
+//                NavigationLink(destination: FullMonthCalendarView()) {
+//                    CalendarTabBarButton(icon: "calendar", text: "Calendar")
+//                }
+//                Spacer()
+//                NavigationLink(destination: ProfileView()) {
+//                    CalendarTabBarButton(icon: "person.fill", text: "Profile")
+//                }
+//                Spacer()
+//                NavigationLink(destination: EventsView()) {
+//                    CalendarTabBarButton(icon: "star.fill", text: "Events")
+//                }
+//            }
+        //    .padding(.horizontal, 16)
             .padding(.bottom, 1)
         }
         .navigationBarTitle("Profile", displayMode: .inline)  // Add if you want to show navigation title

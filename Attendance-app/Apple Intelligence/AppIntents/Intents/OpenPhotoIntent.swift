@@ -103,6 +103,8 @@ enum MediaType: String, AppEnum {
         "Media Type"
     }
     
+    
+    /// Responsible for calling record type for display representation.
     static var caseDisplayRepresentations: [MediaType : DisplayRepresentation] {
         [
             .image: DisplayRepresentation(title: "Image"),
